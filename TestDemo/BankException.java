@@ -41,6 +41,10 @@ class Bank
 		{
 			System.out.print("Enter amount to withdraw:");
 			amt = sc.nextInt();
+			if (amt < 0) {
+			System.out.println("Invalid Amount");
+			return 1;
+		}
 			bal = bal - amt;
 			if(bal<1000)
 			{
@@ -53,13 +57,6 @@ class Bank
 			}
 			
 		}
-		
-		
-		if (amt < 0) {
-			System.out.println("Invalid Amount");
-			return 1;
-		}
-	
 		return 0;
 	}
 }
